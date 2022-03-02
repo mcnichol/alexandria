@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox id="content" prefHeight="420.0" prefWidth="378.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alexandria.alexandria.AlexandriaController">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+    <JFXTreeTableView id="treetableview-book-list" editable="true" VBox.vgrow="ALWAYS">
+        <columns>
+            <TreeTableColumn prefWidth="75.0" text="Name" />
+            <TreeTableColumn prefWidth="75.0" text="Author" />
+        </columns>
+    </JFXTreeTableView>
+</VBox>
