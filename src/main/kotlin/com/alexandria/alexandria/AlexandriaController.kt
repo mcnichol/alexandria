@@ -1,13 +1,12 @@
 package com.alexandria.alexandria
 
-import com.jfoenix.controls.JFXButton
 import javafx.application.Platform
 import javafx.event.ActionEvent
 import javafx.fxml.FXML
 import javafx.fxml.FXMLLoader
 import javafx.scene.Node
+import javafx.scene.control.Button
 import javafx.scene.layout.*
-import javafx.scene.paint.Paint
 import javafx.stage.FileChooser
 import java.io.File
 
@@ -24,28 +23,18 @@ class AlexandriaController {
     }
 
     fun onRawClick(actionEvent: ActionEvent) {
-        val source: Node = actionEvent.source as Node
-        val scene: VBox = source.scene.lookup("#main") as VBox
-
         val fxmlLoader = FXMLLoader(Alexandria::class.java.getResource("content-raw-data.fxml"))
         val rawDataNode: GridPane = fxmlLoader.load()
 
 
-        rawDataNode.border = Border(BorderStroke(Paint.valueOf("Red"),BorderStrokeStyle.DASHED,CornerRadii.EMPTY,BorderStroke.DEFAULT_WIDTHS))
-        GridPane.setVgrow(rawDataNode, Priority.ALWAYS)
-        GridPane.setHgrow(rawDataNode, Priority.ALWAYS)
-        scene.children.setAll(rawDataNode)
         Platform.runLater {
             fxmlLoader.getController<RawFileViewController>().onRawClick(actionEvent)
         }
     }
 
     @FXML
-    lateinit var buttonRawFileView: JFXButton
+    lateinit var buttonRawView: Button
 
     @FXML
-    lateinit var buttonAdd: JFXButton
-
-    @FXML
-    lateinit var buttonLibrary: JFXButton
+    lateinit var buttonAddFile: Button
 }
