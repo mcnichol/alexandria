@@ -11,7 +11,7 @@ class Alexandria : Application() {
         val fxmlLoader = FXMLLoader(Alexandria::class.java.getResource("app-root-view.fxml"))
 
         val load = fxmlLoader.load<Parent>()
-        val scene = Scene(load, 320.0, 240.0)
+        val scene = Scene(load, 800.0, 600.0)
         stage.title = "Alexandria"
         stage.scene = scene
 

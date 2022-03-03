@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.TextArea?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-
-<GridPane id="content" fx:id="gridpaneContent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alexandria.alexandria.RawFileViewController" >
+<?import javafx.scene.layout.*?>
+<GridPane VBox.vgrow="ALWAYS" id="content" fx:id="gridpaneContent" maxHeight="-Infinity" maxWidth="-Infinity"
+          minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/17"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alexandria.alexandria.RawFileViewController">
     <columnConstraints>
-        <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0"/>
     </columnConstraints>
     <rowConstraints>
-        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+        <RowConstraints vgrow="ALWAYS" minHeight="10.0" prefHeight="30.0"/>
     </rowConstraints>
     <children>
-        <TextArea fx:id="textareaRawData" prefHeight="200.0" prefWidth="200.0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />
+        <TextArea fx:id="textareaRawData" prefHeight="200.0" prefWidth="200.0" GridPane.hgrow="ALWAYS"
+                  GridPane.vgrow="ALWAYS"/>
     </children>
 </GridPane>

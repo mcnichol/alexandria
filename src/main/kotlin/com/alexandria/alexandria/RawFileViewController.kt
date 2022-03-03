@@ -2,12 +2,17 @@ package com.alexandria.alexandria
 
 import javafx.application.Platform
 import javafx.event.ActionEvent
+import javafx.fxml.FXML
 import javafx.scene.control.TextArea
+import javafx.scene.layout.GridPane
 import javafx.stage.FileChooser
 import java.io.File
 import java.nio.file.Files
 
 class RawFileViewController {
+    @FXML
+    lateinit var gridpaneContent: GridPane
+    @FXML
     lateinit var textareaRawData: TextArea
 
     fun onRawClick(actionEvent: ActionEvent) {
