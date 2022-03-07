@@ -20,8 +20,9 @@ class RawFileViewController {
         val fc = FileChooser()
         val file: File? = fc.showOpenDialog(textareaRawData.scene.window)
         if (file?.isFile != null) {
-            textareaRawData.text = "File Name:\t\t${file.name}\n"
-            textareaRawData.appendText("File Extension:\t${file.extension}\n\n")
+            textareaRawData.text = "Name:\t${file.name}\n"
+            textareaRawData.appendText("Extension:\t${file.extension}\n\n")
+            textareaRawData.appendText("Size:\t${file.extension}\n\n")
 
             val allLines = Files.readAllLines(file.toPath(), Charsets.ISO_8859_1)
 

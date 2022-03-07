@@ -8,7 +8,7 @@ import javafx.stage.Stage
 
 class Alexandria : Application() {
     override fun start(stage: Stage) {
-        val fxmlLoader = FXMLLoader(Alexandria::class.java.getResource("app-root-view.fxml"))
+        val fxmlLoader = FXMLLoader(Alexandria::class.java.getResource("views/app-root-view.fxml"))
 
         val load = fxmlLoader.load<Parent>()
         val scene = Scene(load, 800.0, 600.0)
